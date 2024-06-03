@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
+## Get Started
+
+Cloning the repository with this git command and https url:
+
+```bash
+git clone https://github.com/TeleCO2gram/frontend.git
+```
+
+or SSH url
+
+```bash
+git clone git@github.com:TeleCO2gram/frontend.git
+```
+
+After cloning the repository, run the following command to install the git hooks:
+
+```bash
+npm run prepare
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
