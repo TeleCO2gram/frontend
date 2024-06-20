@@ -5,10 +5,8 @@ import { RouterOutlet } from "@angular/router";
   selector: "app-root",
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <h1 class="text-3xl font-bold">Frontend</h1>
-    <p class="text-content2">{{ title }}</p>
-  `,
+  templateUrl: './app.component.html' , 
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = "Welcome on TeleCO2Gram project";
