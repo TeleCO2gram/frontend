@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FetchServiceService } from '../fetch-service.service';
+import { FetchServiceService } from '../service/fetch-service.service';
 import { Message } from '../models/message';
 
 
