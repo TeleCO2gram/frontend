@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FetchServiceService } from '../service/fetch-service.service';
 import { Message } from '../models/message';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Message } from '../models/message';
     standalone: true,
     templateUrl: './table-message.component.html',
     styleUrl: './table-message.component.css',
-    imports: []
+    imports: [CommonModule]
 })
 export class TableMessageComponent implements AfterViewInit, OnInit  {
 
@@ -31,6 +32,7 @@ export class TableMessageComponent implements AfterViewInit, OnInit  {
   
     this.fetchService.getAllMessage().subscribe({
       next: (data: Message[]) => {
+        console.log('Messages received:', data);  // Log for test
         this.messages = data;
       },
         error: (error) => {
