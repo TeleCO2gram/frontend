@@ -1,4 +1,6 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FetchServiceService } from '../fetch-service.service';
+import { Message } from 'postcss';
 
 @Component({
     selector: 'app-table-message',
@@ -7,7 +9,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     styleUrl: './table-message.component.css',
     imports: []
 })
-export class TableMessageComponent implements AfterViewInit   {
+export class TableMessageComponent implements AfterViewInit, OnInit  {
 
   @ViewChild("titolo") titolo!: ElementRef;
   @ViewChild("table") table!: ElementRef;
@@ -16,11 +18,39 @@ export class TableMessageComponent implements AfterViewInit   {
   //@ViewChild("mostra1") mostra1!: ElementRef;
   //@ViewChild("mostra2") mostra2!: ElementRef;
 
-
+  message: Message = {
+      id: 0,
+      type: '',
+      date: '',
+      weight: 0,
+      user_id: 0
+  };
   
-  constructor(){
+  messages: Message[] = [];
+
+  constructor(private fetchService:FetchServiceService){
 
   }
+
+  
+  ngOnInit() {
+    //this.table.nativeElement.style.display = 'None';
+    //throw new Error('Function not implemented.');
+
+    this.fetchService.getAllMessage().subscribe({
+      next: (data:Message) => {
+        this.messages = data;
+      },
+
+        error: (error) => {
+        console.error(error);
+        alert('An error occurred while fetching user details');
+      }
+    });
+  
+
+  }
+
   ngAfterViewInit(): void {
     //let pulsante2 = document.querySelector('.mostra2');
 
@@ -28,11 +58,10 @@ export class TableMessageComponent implements AfterViewInit   {
     this.table2.nativeElement.style.display = 'Block';
   }
 
-  ngOnInit() {
-    //this.table.nativeElement.style.display = 'None';
-  }
-
   
 
 
+
+
 }
+
