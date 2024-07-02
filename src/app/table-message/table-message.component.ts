@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FetchServiceService } from '../fetch-service.service';
 import { Message } from '../models/message';
-import { IfStmt } from '@angular/compiler';
+
 
 @Component({
     selector: 'app-table-message',
