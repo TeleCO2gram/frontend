@@ -1,16 +1,23 @@
+<div class="navbar">
+	<div class="navbar-start">
+		<a class="navbar-item">TeleCo2gram</a>
+	</div>
+	<div class="navbar-end">
+		<a class="navbar-item">Home</a>
+		<a class="navbar-item">About</a>
+		<a class="navbar-item">Contact</a>
+	</div>
+</div>
 
-<h1 #titolo class="text-3xl font-bold">Frontend</h1>
-
-<div><button class="btn btn-loading btn-success">Cerca</button></div>
-<div class="flex w-full overflow-x-auto">
+<div class="flex w-full overflow-x-auto m-20">
 	<table class="table" #table>
 		<thead>
 			<tr>
 				<th>ID</th>
 				<th>Type</th>
 				<th>Dates</th>
-				<th>Status</th>
-				<th>Amount</th>
+				<th>Weight</th>
+				<th>User</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -20,93 +27,10 @@
 				<td>{{ message.date }}</td>
 				<td>{{ message.weight }}</td>
 				<td>{{ message.user_id }}</td>
-			  </tr>
-
-			<tr>
-				<th>001</th>
-				<td>Text</td>
-				<td>May 19 2028 - may 22 2028</td>
-				<td><span class="status">Normal</span></td>
-				<td>500 ng.</td>
 			</tr>
-			<tr>
-				<th>002</th>
-				<td>Audio</td>
-				<td>May 19 2028 - may 22 2028</td>
-				<td><span class="status2">High</span></td>
-				<td>3000 ng.</td>
-			</tr>
-			<tr>
-				<th>003</th>
-				<td>Video</td>
-				<td>jul 20 2025 - jul 23 2025</td>
-				<td><span class="status1">Medium</span></td>
-				<td>1000 ng.</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="direzione"><button #mostra2 class="mostra2">tabella2</button></td>
-			</tr>
-
-		</tbody>
-	</table>
-
-
-	<table class="table" #table2>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th class="tipe">Type</th>
-				<th>Dates</th>
-				<th>Status</th>
-				<th>Amount</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>001</th>
-				<td class="tipe"><span>tt tt</span><br>
-					<span>info&#64;gamil.com</span>
-				</td>
-				<td>May 19 2028 - may 22 2028</td>
-				<td><span class="status">Normal</span></td>
-				<td>500 ng.</td>
-			</tr>
-			<tr>
-				<th>002</th>
-				<td class="tipe"><span>tt tt</span><br>
-					<span>info&#64;gamil.com</span>
-				</td>
-				<td>May 19 2028 - may 22 2028</td>
-				<td><span class="status1">Medium</span></td>
-				<td>1000 ng.</td>
-			</tr>
-			<tr>
-				<th>003</th>
-				<td class="tipe"><span>tt tt</span><br>
-					<span>info&#64;gamil.com</span>
-				</td>
-				<td>jul 20 2025 - jul 23 2025</td>
-				<td><span class="status2">High</span></td>
-				<td>3000 ng.</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="direzione"><button #mostra2 class="mostra1">tabella1</button></td>
-			</tr>
-
 		</tbody>
 	</table>
 </div>
-
-
-
 
 
 
