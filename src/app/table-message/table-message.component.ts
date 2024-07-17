@@ -1,7 +1,10 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { FetchServiceService } from '../service/fetch-service.service';
 import { Message } from '../models/message';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
+
+
 
 
 @Component({
@@ -9,7 +12,7 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     templateUrl: './table-message.component.html',
     styleUrl: './table-message.component.css',
-    imports: [CommonModule]
+    imports: [CommonModule,RouterModule]
 })
 export class TableMessageComponent implements AfterViewInit, OnInit  {
 
