@@ -33,7 +33,7 @@ export class TableMessageComponent implements AfterViewInit, OnInit  {
   
   ngOnInit() {
 /** Get data from file named db.json  */
-    this.http.get<any[]>('./db.json').subscribe({ 
+    this.http.get<any[]>('./assets/db.json').subscribe({ 
       next: response => {
       console.log('Data loaded:', response); // Log per il debug
       this.data = response;
