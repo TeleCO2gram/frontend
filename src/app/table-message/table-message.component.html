@@ -23,14 +23,28 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let message of messages">
-				<th>{{ message.id }}</th>
-				<td>{{ message.type }}</td>
-				<td>{{ message.date }}</td>
-				<td>{{ message.weight }}</td>
-				<td><a routerLink="/tableMessagesByUser/{{ message.user_id }}">Telegram UserName with id {{ message.user_id }}</a></td>
+			<tr *ngFor="let item of data">
+				<th>{{ item.id }}</th>
+				<td>{{ item.type }}</td>
+				<td>{{ item.date }}</td>
+				<td>{{ item.weight }}</td>
+				<td><a routerLink="/tableMessagesByUser/{{ item.user_id }}">Telegram UserName with id {{ item.user_id }}</a></td>
 			</tr>
 		</tbody>
 	</table>
-
+<br>
+<hr>
+<br>
+	<table class="w-6" #table2> 
+		<thead>
+		  <tr>
+			<th *ngFor="let key of getKeys(data[0])">{{ key }}</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let item of data">
+			<td *ngFor="let key of getKeys(item)">{{ item[key] }}</td>
+		  </tr>
+		</tbody>
+	  </table>
 
