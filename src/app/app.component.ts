@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { TableMessageComponent } from "./table-message/table-message.component";
+import { TableMessageComponent } from "./features/table-message/table-message.component";
 
 
 @Component({
