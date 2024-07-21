@@ -1,7 +1,7 @@
 import { Routes } from "@angular/router";
 import { TableMessageComponent } from "./features/table-message/table-message.component";
 import { AppComponent } from "./app.component";
-import { ChartPieComponent } from "./chart-pie/chart-pie.component";
+import { ChartPieComponent } from "./features/dashboard/chart-pie/chart-pie.component";
 import { DashboardComponent } from "./features/dashboard/dashboard.component";
 import { HomeComponent } from "./features/home/home.component";
 import { AboutComponent } from "./features/about/about.component";
