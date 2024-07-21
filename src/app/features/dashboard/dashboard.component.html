@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+  
+    <!-- Aggiungi qui la tabella -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">Column 1</th>
+            <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">Column 2</th>
+            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Column 3</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr>
+            <td class="w-1/3 py-3 px-4"><app-chart-pie></app-chart-pie></td>
+            <td class="w-1/3 py-3 px-4">Data 2</td>
+            <td class="text-left py-3 px-4">Data 3</td>
+          </tr>
+          <tr class="bg-gray-200">
+            <td class="w-1/3 py-3 px-4">Data 4</td>
+            <td class="w-1/3 py-3 px-4"><app-chart-pie></app-chart-pie></td>
+            <td class="text-left py-3 px-4">Data 6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
