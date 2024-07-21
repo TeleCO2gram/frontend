@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavBarComponent } from "../../core/components/nav-bar/nav-bar.component";
-import { ChartPieComponent } from '../../chart-pie/chart-pie.component';
+import { ChartPieComponent } from './chart-pie/chart-pie.component';
 
 @Component({
   selector: 'app-dashboard',
