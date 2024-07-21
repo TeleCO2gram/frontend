@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
-import { FetchServiceService } from '../service/fetch-service.service';
-import { Message } from '../models/message';
+import { FetchServiceService } from '../../service/fetch-service.service';
+import { Message } from '../../models/message';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { NavBarComponent } from '../../core/components/nav-bar/nav-bar.component';
 
 
 
@@ -13,7 +14,11 @@ import { HttpClient } from '@angular/common/http';
     standalone: true,
     templateUrl: './table-message.component.html',
     styleUrl: './table-message.component.css',
-    imports: [CommonModule,RouterModule]
+    imports: [
+      CommonModule,
+      RouterModule,
+      NavBarComponent
+    ]
 })
 export class TableMessageComponent implements AfterViewInit, OnInit  {
 
