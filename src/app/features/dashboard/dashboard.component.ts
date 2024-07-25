@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavBarComponent } from "../../core/components/nav-bar/nav-bar.component";
 import { ChartPieComponent } from './chart-pie/chart-pie.component';
 import { DynamicTreeComponent } from './dynamic-tree/dynamic-tree.component';
-import { FormsModule } from '@angular/forms';  // Importa FormsModule
+import { FormsModule } from '@angular/forms';
+import { VerticalBarChartComponent } from "./vertical-bar-chart/vertical-bar-chart.component";  // Importa FormsModule
 
 
 @Component({
@@ -12,8 +13,9 @@ import { FormsModule } from '@angular/forms';  // Importa FormsModule
     NavBarComponent,
     ChartPieComponent,
     DynamicTreeComponent,
-    FormsModule
-  ],
+    FormsModule,
+    VerticalBarChartComponent
+],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
