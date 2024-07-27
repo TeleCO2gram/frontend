@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+	<table class="table m-10 w-11/12" #table>
+		<thead>
+			<tr>
+				<th class="w-2/12">ID</th>
+				<th class="w-2/12">Type</th>
+				<th class="w-6/12">Date</th>
+				<th class="w-2/12">Weight</th>
+				<th class="w-12/12">User</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of data">
+				<th>{{ item.id }}</th>
+				<td>{{ item.type }}</td>
+				<td>{{ item.date }}</td>
+				<td>{{ item.weight }}</td>
+				<td><a routerLink="/tableMessagesByUser/{{ item.user_id }}">Telegram UserName with id {{ item.user_id }}</a></td>
+			</tr>
+		</tbody>
+	</table>
+<br>
+<hr>
+<br>
+	
+

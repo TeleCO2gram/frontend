@@ -1,0 +1,77 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+  
+    <!-- Aggiungi qui la tabella -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">&nbsp;</th>
+            <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">&nbsp;</th>
+            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">&nbsp;</th>
+
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr>
+            <td class="w-1/3 py-3 px-4">
+              <app-chart-pie></app-chart-pie></td>
+            <td class="w-1/3 py-3 px-4 font-bold mb-4">CO2 Emissions by message types
+              <hr>
+              <ul>
+                <li>Video: 150 kg </li>
+                <li>Audio: 30 kg  </li>
+                <li>Sticker: 10 kg </li>
+                <li>Images: 80 kg  </li>
+                <li>Text: 2 kg  </li>
+              </ul>
+            </td> 
+            <td class="text-left py-3 px-4 font-bold mb-4">Groups CO2 emissions
+              <hr>
+              <app-vertical-bar-chart></app-vertical-bar-chart>
+            </td>
+          </tr>
+          <tr class="bg-gray-200">
+            <td class="w-1/3 py-3 px-4 font-bold mb-4">
+              Groups 
+              <p>25</p>
+            </td>
+            <td class="w-1/3 py-3 px-4 font-bold mb-4">
+              Users
+              <p>300</p>
+            </td>
+            <td class="text-left py-3 px-4 font-bold mb-4">Last week / Last year</td>
+          </tr>
+          <tr><!-- class="bg-gray-200" -->
+            <td class="w-1/3 py-3 px-4"><p>
+              Questo albero visualizza il consumo totale di CO2 associato ai messaggi su Telegram. 
+              Man mano che l'albero si colora, indica un aumento del consumo di CO2 fino a raggiungere un limite massimo predefinito. 
+              Al raggiungimento del colore totale, sarà necessario acquistare un numero predefinito di alberi per compensare l'impatto ambientale.
+            </p>
+            <p>
+              <strong>Come funziona:</strong>
+              <ul>
+                <li>L'albero parte con una bassa opacità (ad esempio, al 2%).</li>
+                <li>Ogni messaggio inviato su Telegram contribuisce ad aumentare l'opacità dell'albero.</li>
+                <li>Quando l'albero raggiunge il 100% di colore (opacità completa), significa che è stato raggiunto il limite massimo di consumo di CO2.</li>
+                <li>Al raggiungimento di questo limite, è necessario acquistare un certo numero di alberi per compensare le emissioni di CO2 prodotte dai messaggi.</li>
+              </ul>
+            <p>
+              <strong>Obiettivo:</strong> Sensibilizzare gli utenti sul consumo di CO2 generato dai messaggi di Telegram e promuovere pratiche sostenibili come l'acquisto di alberi per compensare l'impatto ambientale.
+            </p></td>
+            <td class="w-1/3 py-3 px-4"><app-dynamic-tree [value]="dynamicValue"></app-dynamic-tree></td>
+            <td class="text-left py-3 px-4">
+              <!-- Aggiungi un input o un pulsante per aggiornare manualmente il valore -->
+              <div class="mt-4">
+                <label for="valueInput" class="block text-sm font-medium text-gray-700">CO2 consumption</label>
+                
+                <input  id="valueInput" type="number" [(ngModel)]="dynamicValue"  class="input input-error" />
+              </div>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
