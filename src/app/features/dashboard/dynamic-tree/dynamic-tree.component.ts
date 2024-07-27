@@ -13,7 +13,7 @@ export class DynamicTreeComponent implements OnChanges{
   @Input() value:number = 0;
 
   get opacity():number {
-    return this.value / 100; // Calcola l'opacità del SVG in base al valore
+    return this.value / 100; // Calculate the opacity of the SVG based on the value
   }
 
   get isMaxReached(): boolean {
